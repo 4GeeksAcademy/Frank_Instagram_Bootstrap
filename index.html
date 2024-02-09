@@ -125,67 +125,135 @@
       </div>
     </nav>
   </head>
-<div class="container-fluid">
-      <div class="container">
-    <button class="btn btn-primary btn-toggle-grid"><i class="fa-solid fa-table-cells"></i></button>
-    <button class="btn btn-primary btn-toggle-onebyone"><i class="fa-solid fa-square"></i></button>
-    <div class="card-section">
-        <!-- Card elements here -->
-    </div>
-</div>
+ 
+  
+  <style>
+    
+  </style>
+  
 
 <!-- Rest of the code -->
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get necessary elements
-        const btnToggleGrid = document.querySelector('.btn-toggle-grid');
-        const btnToggleOneByOne = document.querySelector('.btn-toggle-onebyone');
-        const cardSection = document.querySelector('.card-section');
-        const cards = cardSection.querySelectorAll('.card');
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></i></button>
+ 
+  </li>
+  
+  
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+  </li>
+  
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+    <div class="row">
+      <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="d-flex justify-content-between">
+              <p><strong>The Need For Speed</strong></p>
+              <p class="text-end">2/24</p>
+          </div>
+          
+              <img src="https://th.bing.com/th?id=OIP.ZA-ZnE5yw2zM6vSehFDxxwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <p class="card-text"><strong>350 Likes</strong></p>
+                  <p>The car of dreams; this car will take you places</p>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <div class="card" style="width: 18rem;">
+              <img src="https://th.bing.com/th?id=OIP.MGIqPji1eWGC4cjDKRYPagHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <p class="card-text"><strong>222 Likes</strong></p>
+                  <p>If you are not first, then you are last</p>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <div class="card" style="width: 18rem;">
+              <img src="https://th.bing.com/th?id=OIP.WpLOpK9DYDzHon9X6q5xjwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <p class="card-text"><strong>198 Likes</strong></p>
+                  <p>Let's GOOOOOOOO</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 
-        // Define the initial display state
-        let isGrid = true;
-        showCardsGrid(); // Show cards in grid layout as default
 
-        // Event listeners for the toggle buttons
-        btnToggleGrid.addEventListener('click', function () {
-            if (!isGrid) {
-                showCardsGrid(); // Show cards in grid layout
-                btnToggleGrid.disabled = true; // Disable the current button
-                btnToggleOneByOne.disabled = false; // Enable the other button
-            }
-        });
 
-        btnToggleOneByOne.addEventListener('click', function () {
-            if (isGrid) {
-                showCardsOneByOne(); // Show cards one at a time
-                btnToggleOneByOne.disabled = true; // Disable the current button
-                btnToggleGrid.disabled = false; // Enable the other button
-            }
-        });
 
-        // Function to show cards in a grid layout
-        function showCardsGrid() {
-            cardSection.classList.remove('flex-column');
-            for (let card of cards) {
-                card.classList.add('col'); // Add Bootstrap column class
-                card.classList.remove('d-inline-block');
-            }
-            isGrid = true;
-        }
+<div class="container-fluid">
+<div class="row">
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP._JCFC7JzCH7QrvaHcBA7DgHaHa?w=164&h=180&c=7&r=0&o=5&dpr=1.6&pid=1.7">
+            <div class="card-body">
+                <p class="card-text"><strong>275 Likes</strong></p>
+                <p>I wanna go fast</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.rFk8kbWvmjbb58F3XUvzJAHaEu?w=283&h=180&c=7&r=0&o=5&dpr=1.6&pid=1.7" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><strong>248 Likes</strong></p>
+                <p>Too fast for you</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th?id=OIP.WpLOpK9DYDzHon9X6q5xjwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><strong>351 Likes</strong></p>
+                <p>Fast, speed, win</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+  <div class="col">
+      <div class="card" style="width: 18rem;">
+          <img src="https://th.bing.com/th?id=OIP.ZA-ZnE5yw2zM6vSehFDxxwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
+          <div class="card-body">
+              <p class="card-text"><strong>487 Likes</strong></p>
+              <p>1st place</p>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card" style="width: 18rem;">
+          <img src="https://th.bing.com/th/id/OIP.XxvBFyckiie8MQlaYCmmVAHaHa?w=209&h=209&c=7&r=0&o=5&dpr=1.6&pid=1.7">
+          <div class="card-body">
+              <p class="card-text"><strong>511 Likes</strong></p>
+              <p>Watch me go</p>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card" style="width: 18rem;">
+          <img src="https://th.bing.com/th/id/OIP.PcUf1WwpsLuH_l5Hg6lvZgHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.6&pid=1.7">
+          <div class="card-body">
+              <p class="card-text"><strong>317 Likes</strong></p>
+              <p>Speed Racer Racer X</p>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
 
-        // Function to show cards one at a time
-        function showCardsOneByOne() {
-            cardSection.classList.add('flex-column');
-            for (let card of cards) {
-                card.classList.remove('col'); // Remove Bootstrap column class
-                card.classList.add('d-inline-block');
-            }
-            isGrid = false;
-        }
-    });
-</script>
+  </div>
+
 
 
   <body>
@@ -194,107 +262,7 @@
     
     
 
-      <div class="row">
-          <div class="col">
-              <div class="card" style="width: 18rem;">
-                <div class="d-flex justify-content-between">
-                  <p><strong>The Need For Speed</strong></p>
-                  <p class="text-end">2/24</p>
-              </div>
-              
-                  <img src="https://th.bing.com/th?id=OIP.ZA-ZnE5yw2zM6vSehFDxxwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <p class="card-text"><strong>350 Likes</strong></p>
-                      <p>The car of dreams; this car will take you places</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col">
-              <div class="card" style="width: 18rem;">
-                  <img src="https://th.bing.com/th?id=OIP.MGIqPji1eWGC4cjDKRYPagHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <p class="card-text"><strong>222 Likes</strong></p>
-                      <p>If you are not first, then you are last</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col">
-              <div class="card" style="width: 18rem;">
-                  <img src="https://th.bing.com/th?id=OIP.WpLOpK9DYDzHon9X6q5xjwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <p class="card-text"><strong>198 Likes</strong></p>
-                      <p>Let's GOOOOOOOO</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
-  
- 
-    
-  <div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="https://th.bing.com/th/id/OIP._JCFC7JzCH7QrvaHcBA7DgHaHa?w=164&h=180&c=7&r=0&o=5&dpr=1.6&pid=1.7">
-                <div class="card-body">
-                    <p class="card-text"><strong>275 Likes</strong></p>
-                    <p>I wanna go fast</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="https://th.bing.com/th/id/OIP.rFk8kbWvmjbb58F3XUvzJAHaEu?w=283&h=180&c=7&r=0&o=5&dpr=1.6&pid=1.7" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text"><strong>248 Likes</strong></p>
-                    <p>Too fast for you</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="https://th.bing.com/th?id=OIP.WpLOpK9DYDzHon9X6q5xjwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text"><strong>351 Likes</strong></p>
-                    <p>Fast, speed, win</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-  <div class="row">
-      <div class="col">
-          <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th?id=OIP.ZA-ZnE5yw2zM6vSehFDxxwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" class="card-img-top" alt="...">
-              <div class="card-body">
-                  <p class="card-text"><strong>487 Likes</strong></p>
-                  <p>1st place</p>
-              </div>
-          </div>
-      </div>
-      <div class="col">
-          <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th/id/OIP.XxvBFyckiie8MQlaYCmmVAHaHa?w=209&h=209&c=7&r=0&o=5&dpr=1.6&pid=1.7">
-              <div class="card-body">
-                  <p class="card-text"><strong>511 Likes</strong></p>
-                  <p>Watch me go</p>
-              </div>
-          </div>
-      </div>
-      <div class="col">
-          <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th/id/OIP.PcUf1WwpsLuH_l5Hg6lvZgHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.6&pid=1.7">
-              <div class="card-body">
-                  <p class="card-text"><strong>317 Likes</strong></p>
-                  <p>Speed Racer Racer X</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+      
 
 
     <!-- Include Bootstrap JavaScript -->
