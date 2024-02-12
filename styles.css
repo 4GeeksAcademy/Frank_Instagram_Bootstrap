@@ -1,3 +1,7 @@
-.body{
-margin: 500%;
-}
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
